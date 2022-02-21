@@ -1,8 +1,5 @@
 const arr = [2, 1, 4, 3, 6, 0, 12, 23, -1, -2, 34];
-let index = 0;
-let secondHalf = [];
-let anotherArr = [];
-function mergeImplementation(arr) {
+function mergeImplementation(arr, index = 0, secondHalf = [], anotherArr = []) {
     if(Array.isArray(arr)){
     if (arr[index] > arr[index + 1]) {
         let half = Math.ceil(arr.length / 2);
@@ -24,7 +21,7 @@ function mergeImplementation(arr) {
     }
 
     index++;
-    return mergeSort(anotherArr);
+    return mergeSort(anotherArr, index, secondHalf, anotherArr);
     }else{
         return "input right value";
     }
