@@ -17,6 +17,6 @@ function oddOrNot(num, index = 0) {
 // console.log(oddOrNot(1111111111111111111111111111111111111111111111111111112n));// BigInt
 // console.log(oddOrNot(1111111));
 // console.log(oddOrNot(11111112));
-console.log(oddOrNot(1 13));
+console.log(oddOrNot(113));
 
 
