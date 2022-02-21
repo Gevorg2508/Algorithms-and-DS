@@ -1,7 +1,5 @@
-const arr = [14, [1, [[[3, []]], 1], 0]];
-let index = 0;
-let array = [];
-function concat(arr = undefined) {
+const arr = [1, [3, 4, [1, 2]], 10];
+function concat(arr, array = [], index = 0) {
     if (Array.isArray(arr)) {
         array = arr;
         if (Array.isArray(arr[index])) {
@@ -15,7 +13,7 @@ function concat(arr = undefined) {
         }
 
         index++;
-        return concat(array);
+        return concat(array, array, index);
     } else {
         return "input right value!";
     }
