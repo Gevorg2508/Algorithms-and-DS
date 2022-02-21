@@ -1,5 +1,5 @@
-let flexValue = 0;
-function sumOfDig(num) {
+// let flexValue = 0;
+function sumOfDig(num, flexValue = 0) {
     if (typeof num === 'number') {
         let arr = [];
         arr.push(num);
@@ -8,9 +8,9 @@ function sumOfDig(num) {
         if (flexValue <= 9) {
             return flexValue;
         }
-        return sumOfDig(flexValue);
+        return sumOfDig(flexValue, flexValue);
     } else {
         return "input right number!";
     }
 }
-console.log(sumOfDig(56));
+console.log(sumOfDig(111));
